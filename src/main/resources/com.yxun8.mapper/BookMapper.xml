@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yxun8.mapper.BookMapper">
+    <insert id="addBook">
+        INSERT INTO `books`(t_name,t_size,t_date,t_desc)
+        VALUES(#{tName},#{tSize},#{tDate},#{tDesc});
+    </insert>
+
+    <update id="updateBookUI">
+        SELECT * FROM `books` WHERE t_id = #{tId}
+    </update>
+
+    <update id="updateBook">
+        UPDATE `books` SET t_name = #{tName}, t_size = #{tSize},t_date = #{tDate},t_desc = #{tDesc}
+        WHERE t_id = #{tId}
+    </update>
+
+    <delete id="deleteBook">
+        DELETE FROM `books` WHERE t_id = #{tId}
+    </delete>
+
+    <select id="allBooks" resultType="com.yxun8.pojo.Books">
+        select * from `books`
+    </select>
+</mapper>
