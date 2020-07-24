@@ -17,7 +17,7 @@ import java.util.List;
 
 
 public class Test {
-    /*测试查询全部内容*/
+    /*测试查询全部内容66*/
     @org.junit.Test
     public void getAll(){
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
